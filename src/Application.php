@@ -27,7 +27,7 @@ class Application extends SilexApplication
             );
 
             $channel = $connection->channel();
-            $channel->exchange_declare(getenv('RABBITMQ_EXCHANGE'), 'direct', false, false, false);
+            $channel->exchange_declare(getenv('RABBITMQ_EXCHANGE'), 'direct');
 
             return new OrderPusher(getenv('RABBITMQ_EXCHANGE'), $channel);
         };

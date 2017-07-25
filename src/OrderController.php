@@ -31,7 +31,7 @@ class OrderController
         $orders = json_decode($request->getContent());
 
         foreach ($orders as $order) {
-            $this->orderPusher->publishOrder($order->order, $order->color);
+            $this->orderPusher->publishOrder($order->color, $order->order);
         }
 
         return new JsonResponse(null, Response::HTTP_NO_CONTENT);
