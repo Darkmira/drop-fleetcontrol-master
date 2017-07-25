@@ -1,0 +1,11 @@
+{
+    "require": {
+        "silex/silex": "~2.0",
+        "php-amqplib/php-amqplib": "2.6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Drop\\FleetControl\\": "src/"
+        }
+    }
+}
